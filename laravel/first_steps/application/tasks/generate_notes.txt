@@ -1,0 +1,2 @@
+//run generate task, describe what you want it to do, give it its' attributes
+php artisan generate:migration create_posts_table id:integer title:string body:text

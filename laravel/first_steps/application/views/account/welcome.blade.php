@@ -1,0 +1,1 @@
+<?php echo "Welcome {$data->name} to {$data->place}!";
