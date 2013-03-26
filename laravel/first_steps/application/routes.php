@@ -33,8 +33,17 @@
 */
 
 //Routes with controllers
-Route::get("/", "home@index");
-Route::post("/", "home@index");
+Route::get("/", "login@index");
+Route::post("/", "login@index");
+Route::get("logout", "account@logout");
+
+Route::get("profile", "account@profile");
+
+Route::get("register", "register@index");
+Route::post("register", "register@index");
+
+Route::get("home", "home@index");
+Route::get("greeting/(:any?)", "home@greeting");
 
 Route::get("about/(:any?)", "home@about");
 

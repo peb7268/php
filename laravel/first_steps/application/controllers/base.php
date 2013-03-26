@@ -14,4 +14,11 @@ class Base_Controller extends Controller {
 		return Response::error('404');
 	}
 
+	public function __construct()
+	{
+		Asset::add('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"');
+		Asset::add('hammer', 'js/hammer.js');
+		Asset::add('global', 'js/global.js');
+	}
+
 }

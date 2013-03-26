@@ -1,28 +1,37 @@
 <?php
-
 class Home_Controller extends Base_Controller {
 	public $restful = true;
-	/* Default Non-RESTful Style
-		public function action_index() {
-			return View::make('home.index');
+	public $layout = 'layouts.master';
+	public $user;
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->filter('before', $this->setUp());
+	}	
+	public function setUp()
+	{
+		Asset::add('base', 'css/base.css');
+	}
+	public function get_index()
+	{
+		if (Auth::check()){ 
+			$this->user = Auth::user();
+		} else {
+			return Redirect::to('/')->with('status', 'Please login to continue.');;
 		}
-	*/
-
-	//Enable Restful Routing: GET, POST, PUT, DELETE
-	public function get_index(){
-		$message = "get index method firing";
-		return View::make('home.index')->with('message', $message);
+		//fix the $user property later bc only works when authed
+		$data = array(
+			'date' 	 	=> date('D, F d'),
+			'name' 		=> $this->user->name,
+			'message' 	=> '',
+			'user'		=> $this->user
+		);
+		return View::make('home.index')->with('data', $data);
 	}
-
-	public function get_about($name){
-		$message = "get about method firing and finding info about {$name}";
-		return View::make('home.about')->with('message', $message);
-	}
-
-	public function post_index(){
+	public function post_index()
+	{
 		$message = "post index method firing";
 		return View::make('home.index')->with('message', $message);
 	}
-
-
 }

@@ -1,1 +1,2 @@
-<?php echo "Welcome {$data->name} to {$data->place}!";
+@layout('layouts.master')
+Welcome {{$data->name}} to {{$data->place}}!

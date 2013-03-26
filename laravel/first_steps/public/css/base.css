@@ -1,0 +1,296 @@
+/*-- Reset ------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+p {
+  margin: 0px;
+  line-height: 1.2; }
+
+h1, h2, h3, h4 {
+  margin: 4px 0 0 0; }
+
+/*-- Utility Styles ------------------------------------------------------------------*/
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear:after {
+  content: ' ';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*-- HTML5 Checking -----------------------------------------------------------------*/
+section, header, footer, aside {
+  display: block; }
+
+/* -- Global -- */
+/* -- Footer --*/
+/*-- Misc. Colors --*/
+body {
+  font-family: helvetica, arial, sans-serif;
+  background-color: whitesmoke;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#cacaca));
+  background-image: -webkit-linear-gradient(top, whitesmoke, #cacaca);
+  background-image: -moz-linear-gradient(top, whitesmoke, #cacaca);
+  background-image: -o-linear-gradient(top, whitesmoke, #cacaca);
+  background-image: -ms-linear-gradient(top, whitesmoke, #cacaca);
+  background-image: linear-gradient(top, whitesmoke, #cacaca);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color'); }
+
+#wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto; }
+
+header {
+  height: 30px;
+  background-color: #cccccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#333333));
+  background-image: -webkit-linear-gradient(top, #cccccc, #333333);
+  background-image: -moz-linear-gradient(top, #cccccc, #333333);
+  background-image: -o-linear-gradient(top, #cccccc, #333333);
+  background-image: -ms-linear-gradient(top, #cccccc, #333333);
+  background-image: linear-gradient(top, #cccccc, #333333);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+  border-top: 1px solid black;
+  border-bottom: 2px solid black; }
+  header a {
+    display: block;
+    color: white;
+    margin: 0;
+    text-shadow: 0px 0px 2px black; }
+    header a#date {
+      float: left;
+      margin: 0 0 0 1%;
+      padding: 6px 0 0; }
+  header > ul {
+    padding: 3px 0 0 0; }
+    header > ul#account-controls {
+      float: right;
+      margin: 0 1% 0 0;
+      width: 40%; }
+      header > ul#account-controls #list-icon {
+        float: left;
+        width: 15px;
+        margin: 2px 4% 0 0; }
+        header > ul#account-controls #list-icon div {
+          height: 2px;
+          margin-bottom: 2px;
+          background: #fff; }
+      header > ul#account-controls li.dropdown {
+        display: none; }
+        header > ul#account-controls li.dropdown li {
+          margin: 0 0 5px 0; }
+          header > ul#account-controls li.dropdown li a:hover, header > ul#account-controls li.dropdown li a:active {
+            background: white;
+            color: #000; }
+      header > ul#account-controls > li:nth-child(1) {
+        padding: 7px 4% 5px;
+        border-radius: 5px 5px 0 0; }
+        header > ul#account-controls > li:nth-child(1).active {
+          background: #000; }
+          header > ul#account-controls > li:nth-child(1).active a {
+            color: #eee;
+            text-shadow: none; }
+    header > ul .dropdown {
+      margin: 0;
+      background: black;
+      padding: 5px 4% 15px;
+      border-radius: 0 0 7px 7px; }
+      header > ul .dropdown a {
+        color: #eee;
+        text-shadow: none;
+        padding: 3px; }
+
+#body {
+  min-height: 300px; }
+
+#controls #start, #body #controls form {
+  margin: 120px auto 0;
+  display: block;
+  width: 93.75%;
+  border-radius: 5px;
+  border: 1px solid #ab4f00;
+  line-height: 5;
+  text-align: center;
+  font-size: 1.7em;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: -1px -1px 0px #ab4f00, 1px 1px 0px #ab4f00;
+  box-shadow: 0px 0px 15px #8c8c8c;
+  -webkit-box-shadow: 0px 0px 15px #8c8c8c;
+  -moz-box-shadow: 0px 0px 15px #8c8c8c;
+  -o-box-shadow: 0px 0px 15px #8c8c8c;
+  background-color: #ffbd66;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 200, from(#ff9100), to(#ffbd66));
+  background-image: -webkit-radial-gradient(50% 50%, #ffbd66, #ff9100);
+  background-image: -moz-radial-gradient(50% 50%, #ffbd66, #ff9100);
+  background-image: -o-radial-gradient(50% 50%, #ffbd66, #ff9100);
+  background-image: -ms-radial-gradient(50% 50%, #ffbd66, #ff9100);
+  background-image: radial-gradient(50% 50%, #ffbd66, #ff9100); }
+#controls #start:hover, #body #controls form:hover, #controls #start:active, #body #controls form:active {
+  background-color: #ffbd66;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 200, from(#e68300), to(#ffbd66));
+  background-image: -webkit-radial-gradient(50% 50%, #ffbd66, #e68300);
+  background-image: -moz-radial-gradient(50% 50%, #ffbd66, #e68300);
+  background-image: -o-radial-gradient(50% 50%, #ffbd66, #e68300);
+  background-image: -ms-radial-gradient(50% 50%, #ffbd66, #e68300);
+  background-image: radial-gradient(50% 50%, #ffbd66, #e68300);
+  box-shadow: 0px 0px 15px #333; }
+
+#utility-links {
+  margin: 3px auto;
+  width: 93%; }
+  #utility-links a {
+    float: right;
+    font-size: 10pt;
+    color: #0057f3; }
+    #utility-links a:hover {
+      color: #002973; }
+
+#body #controls form {
+  padding: 15px 0; }
+  #body #controls form input {
+    font-size: 10pt;
+    padding: 7px 1%;
+    width: 62.5%;
+    margin: 5px auto;
+    display: block; }
+  #body #controls form input[type="text"], #body #controls form input[type="password"] {
+    border: 1px solid #ab4f00; }
+  #body #controls form input[type="submit"] {
+    background-color: #4da2f2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4da2f2), to(#0057f3));
+    background-image: -webkit-linear-gradient(top, #4da2f2, #0057f3);
+    background-image: -moz-linear-gradient(top, #4da2f2, #0057f3);
+    background-image: -o-linear-gradient(top, #4da2f2, #0057f3);
+    background-image: -ms-linear-gradient(top, #4da2f2, #0057f3);
+    background-image: linear-gradient(top, #4da2f2, #0057f3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+    border: 1px solid #0f4098;
+    color: #fff; }
+    #body #controls form input[type="submit"]:hover, #body #controls form input[type="submit"]:active {
+      cursor: pointer;
+      background-color: #1e89ee;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#1e89ee), to(#0045c1));
+      background-image: -webkit-linear-gradient(top, #1e89ee, #0045c1);
+      background-image: -moz-linear-gradient(top, #1e89ee, #0045c1);
+      background-image: -o-linear-gradient(top, #1e89ee, #0045c1);
+      background-image: -ms-linear-gradient(top, #1e89ee, #0045c1);
+      background-image: linear-gradient(top, #1e89ee, #0045c1);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color'); }
+  #body #controls form:hover {
+    box-shadow: none;
+    box-shadow: 0px 0px 15px #8c8c8c;
+    -webkit-box-shadow: 0px 0px 15px #8c8c8c;
+    -moz-box-shadow: 0px 0px 15px #8c8c8c;
+    -o-box-shadow: 0px 0px 15px #8c8c8c;
+    background-color: #ffbd66;
+    background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 200, from(#ff9100), to(#ffbd66));
+    background-image: -webkit-radial-gradient(50% 50%, #ffbd66, #ff9100);
+    background-image: -moz-radial-gradient(50% 50%, #ffbd66, #ff9100);
+    background-image: -o-radial-gradient(50% 50%, #ffbd66, #ff9100);
+    background-image: -ms-radial-gradient(50% 50%, #ffbd66, #ff9100);
+    background-image: radial-gradient(50% 50%, #ffbd66, #ff9100); }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#999999), to(black));
+  background-image: -webkit-linear-gradient(top, #999999, black);
+  background-image: -moz-linear-gradient(top, #999999, black);
+  background-image: -o-linear-gradient(top, #999999, black);
+  background-image: -ms-linear-gradient(top, #999999, black);
+  background-image: linear-gradient(top, #999999, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+  border-top: 1px solid #777777;
+  min-height: 40px; }
+  footer ul {
+    width: 100%; }
+    footer ul li {
+      float: left; }
+      footer ul li a {
+        display: block;
+        width: 100%;
+        padding-top: 24px;
+        text-align: center;
+        font-size: 8pt;
+        color: #ccc; }
+      footer ul li:nth-child(1) {
+        float: left;
+        padding: 0;
+        margin: 0 0 0 2%;
+        width: 48%; }
+        footer ul li:nth-child(1) a {
+          background: url("../img/journal.png") no-repeat center -5px;
+          border-right: 2px solid #999; }
+      footer ul li:nth-child(2) {
+        padding: 0;
+        float: right;
+        margin: 0 2% 0 0;
+        width: 48%; }
+        footer ul li:nth-child(2) a {
+          background: url("../img/excersises.png") no-repeat center -5px;
+          border-left: 1px solid #000; }
+
+@media screen and (min-width: 480px) {
+  header ul#account-controls {
+    width: 15%; }
+
+  #controls #start, #body #controls form {
+    margin: 200px auto 0; } }

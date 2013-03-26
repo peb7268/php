@@ -1,0 +1,25 @@
+@mixin gradient($top-color, $bottom-color){
+	background-color: $top-color;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color));
+	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -moz-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -o-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -ms-linear-gradient(top, $top-color, $bottom-color);
+	background-image: linear-gradient(top, $top-color, $bottom-color);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+}
+@mixin gradient-radial($top-color, $bottom-color){
+	background-color: $top-color;
+	background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from($bottom-color), to($top-color));
+	background-image: -webkit-radial-gradient(50% 50%, $top-color, $bottom-color);
+	background-image: -moz-radial-gradient(50% 50%, $top-color, $bottom-color);
+	background-image: -o-radial-gradient(50% 50%, $top-color, $bottom-color);
+	background-image: -ms-radial-gradient(50% 50%, $top-color, $bottom-color);
+	background-image: radial-gradient(50% 50%, $top-color, $bottom-color);
+}
+@mixin box-shadw($x, $y, $blur, $color){
+	box-shadow: $x $y $blur $color;
+	-webkit-box-shadow: $x $y $blur $color;
+	-moz-box-shadow: $x $y $blur $color;
+	-o-box-shadow: $x $y $blur $color;
+}

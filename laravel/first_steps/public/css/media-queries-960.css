@@ -1,0 +1,6 @@
+@media screen and (min-width: 480px) {
+  header ul#account-controls {
+    width: 15%; }
+
+  #controls #start {
+    margin: 200px auto 0; } }

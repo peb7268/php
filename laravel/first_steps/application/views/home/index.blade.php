@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Laravel: RESTful API Testing</title>
-	<meta name="viewport" content="width=device-width">
-	
-</head>
-<body>
-	<h1>Hello from the default Laravel view.</h1>
-	<p><?php echo $message; ?></p>
-</body>
-</html>
+@layout('layouts.master')
+@include('partials.header')
+@include('partials.footer')
+
+@yield('header')
+
+	<p id="message">{{ $data['message'] }}</p>
+	<section id="body">
+		<div id="progress-bar"></div><!-- #progress-bar -->
+		<div id="stats"></div><!-- #stats -->
+		<div id="controls"><a href="#" id="start">Start Workout</a></div><!-- #controls -->
+	</section><!-- #body -->
+
+@yield('footer')
