@@ -5,7 +5,7 @@ var APP = (function(_h){
 	this.controls 	= {};
 	this.events		= {
 		controls: {
-			events: [];
+			events: []
 		}
 	};
 
@@ -61,6 +61,6 @@ $(document).ready(function($) {
 	APP.menu.deploy();
 
 	//see readme in js folder for notes on how this is supposed to function
-	APP.events.controls.addEvent('click', this.controls.toggleHomeControls);
-	APP.events.controls.init();
+	//APP.events.controls.addEvent('click', this.controls.toggleHomeControls);
+	//APP.events.controls.init();
 });
