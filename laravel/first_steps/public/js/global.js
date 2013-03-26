@@ -46,7 +46,7 @@ var APP = (function(_h){
 	}
 	this.events.controls.init = function()
 	{
-		this.events.addEvent('controls');
+		this.events.addPublisher('controls');
 	}
 	this.controls.toggleHomeControls = function(target, toFadeIn)
 	{

@@ -9,14 +9,20 @@ In an effort to make my code more modular and reuseable everything is namespaced
 For insance, there is a controls object that just deals with buttons & controls. 
 Each component is going to be responsoble for binding its own events, exposing and hiding any interface methods on its own ect.. 
 
-Events should be able to bind all of the events for all of the players or each specifically. So 
+The Events should be able to add publishers and then tell all of the publishers to bind all of their resitered events. 
+So to add a publisher you would: 
 ````js 
-this.events.addAll( )
+this.events.addPublisher( 'controls' );
 ```` 
-or 
 
+And to loop through the list of publishers and tell them to bind all of their events you would: 
 ````js 
-this.events.addEvent( 'controls' )
+this.events.bindAll( );
 ```` 
-The events should then be able to be called and the arguments for the events passed to the handlers using 
-apply.
+Publishers can register their own events like so: 
+````js 
+this.events.controls.addEvent( event, action )
+```` 
+The events should then be able to be fired and the arguments for the events obtained by the handlers using 
+apply & the args variable.
+
